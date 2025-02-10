@@ -4,7 +4,7 @@ use serde::{Deserialize, Serialize};
 struct Node {
     #[serde(rename = "@v")]
     v: u32,
-    #[serde(rename = "$value", skip_serializing_if = "Vec::is_empty", default)]
+    #[serde(rename = "Node", skip_serializing_if = "Vec::is_empty", default)]
     nodes: Vec<Node>,
 }
 
